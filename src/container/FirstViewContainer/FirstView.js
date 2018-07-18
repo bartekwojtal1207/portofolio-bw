@@ -27,7 +27,7 @@ class FirstView extends Component {
         };
 
         return (
-            <div style={{height: '100vh'}}>
+            <div>
                 <YoutubeBackground
                     videoId="oLbNS3mAIB0">
                     <div style={{height: '100vh', position: 'relative', zIndex: '2'}}>
@@ -38,11 +38,7 @@ class FirstView extends Component {
         )
 
     }
-    _onReady(event) {
-        // access to player in all event handlers via event.target
-        console.log(event.target)
-        event.target.setLoop()
-    }
+
 
 }
 
