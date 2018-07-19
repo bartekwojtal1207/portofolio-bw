@@ -1,0 +1,52 @@
+.btn-next-view {
+    width: 362px;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    color: white;
+    background-color: initial;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.btn-next-view:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+.btn-next-view:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+.btn-next-view:hover {
+    color: rgb(0, 98, 204);
+    box-shadow: 0 0 30px 0 #C0C0C0;
+    background-color: #FAFAFA;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}

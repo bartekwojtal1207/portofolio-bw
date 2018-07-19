@@ -1,6 +1,10 @@
-.btn-next-view i { display: block;
+.btn-next-view i {
+    display: block;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     transition:         transform .8s ease-in-out;
+    position: relative;
+    top: -51px;
+    left: 111px;
 }
 
 .btn-next-view:hover i {
