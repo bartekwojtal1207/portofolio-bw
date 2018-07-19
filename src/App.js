@@ -7,7 +7,7 @@ import scrollToComponent from 'react-scroll-to-component';
 class App extends Component {
 
     scrollClickHandler = () => {
-        scrollToComponent(this.AboutMe, { offset: 0, align: 'middle', duration: 1000, ease:'inQuint'});
+        scrollToComponent(this.AboutMe, { offset: 0, align: 'middle', duration: 1000, ease: 'inQuint'});
     };
 
     render() {
@@ -21,5 +21,6 @@ class App extends Component {
         );
     }
 }
+
 
 export default App;

@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Auxs from '../../../hoc/Auxs';
-import FirstViewSection from "../FirstViewSection";
 
 const ScrollFirstViewBtn = (props) => {
 
@@ -9,7 +7,6 @@ const ScrollFirstViewBtn = (props) => {
             {props.children}
         </button>
     )
-
 };
 
 export default ScrollFirstViewBtn;

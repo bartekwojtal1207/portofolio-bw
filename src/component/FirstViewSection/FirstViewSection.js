@@ -7,7 +7,6 @@ class FirstViewSection extends Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
@@ -23,5 +22,6 @@ class FirstViewSection extends Component {
         )
     }
 }
+
 
 export default FirstViewSection;

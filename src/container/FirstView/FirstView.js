@@ -9,26 +9,20 @@ class FirstView extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props)
-
     }
 
     render() {
 
         return (
-            <div>
+            <Auxs>
                 <YoutubeBackground
                     videoId="2c2MJPEerrs">
                     <FirstViewSection scrollClick={this.props.scrollClick} />
-
-
                 </YoutubeBackground>
-            </div>
+            </Auxs>
         )
-
     }
-
-
 }
+
 
 export default FirstView;
