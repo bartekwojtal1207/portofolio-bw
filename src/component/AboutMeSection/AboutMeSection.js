@@ -7,7 +7,7 @@ class AboutMeSection extends Component{
 
     render() {
         return(
-            <div>
+            <div style={{height: '100vh'}}>
                 dasdadasdadasd1111111111111
             </div>
         )

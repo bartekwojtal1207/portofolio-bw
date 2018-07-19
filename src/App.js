@@ -1,21 +1,25 @@
-import React , { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
-import FirstView from './container/FirstViewContainer/FirstView';
+import FirstView from './container/FirstView/FirstView';
 import AboutMe from './container/AboutMeContainer/AboutMe';
-
+import scrollToComponent from 'react-scroll-to-component';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <FirstView/>
-          <div>
-            <AboutMe/>
-          </div>
-      </div>
-    );
-  }
+
+    scrollClickHandler = () => {
+        scrollToComponent(this.AboutMe, { offset: 0, align: 'middle', duration: 1000, ease:'inQuint'});
+    };
+
+    render() {
+        return (
+            <div className="App">
+                <FirstView scrollClick={()=> this.scrollClickHandler()}/>
+                <div ref={(div) => { this.AboutMe = div; }}>
+                    <AboutMe/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
