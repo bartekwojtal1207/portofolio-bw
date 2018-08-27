@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Input from './AboutMeForm/AboutMeForm';
-
+import axios from 'axios';
 import './AboutMeSection.css';
 import frontLogo from '../../assets/img/test.png';
 
@@ -14,8 +14,27 @@ class AboutMeSection extends Component{
                 {name: 'name', type: 'text', required: true},
                 {name: 'email', type: 'email', required: true},
                 {name: 'message', type: 'text', required: true}
-            ]
+            ],
+            users: []
         }
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(response => {
+                console.log(response)
+
+                const users = response.data.slice(0,4);
+
+                const updatedUsers = users.map(user => {
+                    return {
+                        ...user,
+                        club: 'test'
+                    }
+                });
+                console.log(updatedUsers)
+                this.setState({users: updatedUsers})
+            })
     }
 
     render() {
