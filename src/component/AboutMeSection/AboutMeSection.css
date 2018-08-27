@@ -3,8 +3,10 @@
 }
 .form-wrapper {
     width: 30%;
+    padding: 15px;
+    padding-bottom: 50px;
+    border: 1px solid #17a2b8;
 }
-
 .form-submit {
     float: left;
 }
@@ -12,4 +14,8 @@
     font-size: 22px;
     text-align: left;
     margin-bottom: 18px;
+    color: #1d1d1d;
+}
+.form-control {
+    font-weight: 300;
 }
