@@ -1,0 +1,15 @@
+.about-me-wrapper {
+    padding: 150px;
+}
+.form-wrapper {
+    width: 30%;
+}
+
+.form-submit {
+    float: left;
+}
+.form-title {
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 18px;
+}
