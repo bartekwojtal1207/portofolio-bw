@@ -1,11 +1,13 @@
 .about-me-wrapper {
-    padding: 150px;
+    padding: 50px;
 }
 .form-wrapper {
     width: 30%;
     padding: 15px;
     padding-bottom: 50px;
     border: 1px solid #17a2b8;
+    float: left;
+    margin: 20px;
 }
 .form-submit {
     float: left;
@@ -18,4 +20,8 @@
 }
 .form-control {
     font-weight: 300;
+}
+.logo-wrapper {
+    margin: 20px;
+    padding: 40px;
 }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Input from './AboutMeForm/AboutMeForm';
 
 import './AboutMeSection.css';
-
+import frontLogo from '../../assets/img/test.png';
 
 class AboutMeSection extends Component{
 
@@ -33,9 +33,12 @@ class AboutMeSection extends Component{
             </div>
         );
 
-
         return(
             <div style={{height: '100vh'}} className={'about-me-wrapper'}>
+                <h1>O mnie !</h1>
+                <br/>
+                <hr/>
+                <br/>
                 <div className={'form-wrapper'}>
                     <h3 className={'form-title'}>Napisz do mnie !</h3>
                     <form action="">
@@ -43,6 +46,9 @@ class AboutMeSection extends Component{
                         <br/>
                         <button role={'submit'} className={'btn btn-info form-submit'}>wyślij</button>
                     </form>
+                </div>
+                <div className={'logo-wrapper'}>
+                    <img src={frontLogo} alt="logo"/>
                 </div>
             </div>
         )
