@@ -15,39 +15,61 @@ class AboutMeSection extends Component{
                 {name: 'email', type: 'email', required: true},
                 {name: 'message', type: 'text', required: true}
             ],
-            users: []
+            users: [],
+            inputsValue: {
+                name: '',
+                email: 'sssaaggg',
+                message: ''
+            }
         }
     }
 
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(response => {
-                console.log(response)
-
                 const users = response.data.slice(0,4);
-
                 const updatedUsers = users.map(user => {
                     return {
                         ...user,
                         club: 'test'
                     }
                 });
-                console.log(updatedUsers)
+
                 this.setState({users: updatedUsers})
             })
     }
 
+    clickHandler() {
+        console.log('click')
+    }
+
+    changeInputHandler(event, id) {
+        const inputValue = {
+            ...this.state.inputsValue
+        };
+        console.log('change');
+        inputValue[id] = event.target.value;
+
+        this.setState({inputsValue: inputValue});
+        console.log(this.state.inputsValue)
+
+    }
+
     render() {
         let formInput = null;
+
         const inputs = [
             ...this.state.inputs
         ];
+
+        console.log('render');
 
         const input = inputs.map((input, id) =>
             <div className="form-group" key={id+'input-wrapp'}>
                 <Input key={id}
                    type={input.type}
                    name={input.name}
+                   change={(event)=> {this.changeInputHandler(event, input.name)}}
                    required={input.required}/>
             </div>
         );
@@ -63,7 +85,7 @@ class AboutMeSection extends Component{
                     <form action="">
                         {input}
                         <br/>
-                        <button role={'submit'} className={'btn btn-info form-submit'}>wyślij</button>
+                        <button className={'btn btn-info form-submit'} >wyślij</button>
                     </form>
                 </div>
                 <div className={'logo-wrapper'}>
