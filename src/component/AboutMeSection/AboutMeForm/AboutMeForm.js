@@ -7,7 +7,6 @@ const input = (props) => {
         <Auxs>
             <input className={'form-control'}
                    onChange={props.change}
-                   // value={props.value}
                    type={props.type}
                    required={props.required}
                    placeholder={props.name}

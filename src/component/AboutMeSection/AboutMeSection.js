@@ -39,20 +39,26 @@ class AboutMeSection extends Component{
             })
     }
 
-    clickHandler() {
-        console.log('click')
+    clickHandler(event) {
+
+        const data  = {
+          title: this.state.inputsValue.name,
+          body: this.state.inputsValue.message
+        };
+
+        axios.post('https://jsonplaceholder.typicode.com/users', data)
+            .then(response => {
+            console.log(response)
+        })
     }
 
     changeInputHandler(event, id) {
         const inputValue = {
             ...this.state.inputsValue
         };
-        console.log('change');
+
         inputValue[id] = event.target.value;
-
-        this.setState({inputsValue: inputValue});
-        console.log(this.state.inputsValue)
-
+        this.setState({ inputsValue: inputValue });
     }
 
     render() {
@@ -85,7 +91,7 @@ class AboutMeSection extends Component{
                     <form action="">
                         {input}
                         <br/>
-                        <button className={'btn btn-info form-submit'} >wyślij</button>
+                        <button className={'btn btn-info form-submit'}  onClick={(event)=> {this.clickHandler(event)}} >wyślij</button>
                     </form>
                 </div>
                 <div className={'logo-wrapper'}>
