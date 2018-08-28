@@ -3,6 +3,7 @@ import Input from './AboutMeForm/AboutMeForm';
 import axios from '../../axios-form';
 import './AboutMeSection.css';
 import frontLogo from '../../assets/img/test.png';
+import Spinner from '../UI/Spinner/Spinner';
 
 class AboutMeSection extends Component{
 
@@ -20,7 +21,8 @@ class AboutMeSection extends Component{
                 name: '',
                 email: '',
                 message: ''
-            }
+            },
+            showSpinner: false
         }
     }
 
@@ -43,14 +45,16 @@ class AboutMeSection extends Component{
 
     clickHandler(event) {
         event.preventDefault()
+        this.setState({showSpinner: true});
         const data  = {
           title: this.state.inputsValue.name,
           body: this.state.inputsValue.message
         };
-console.log(data)
+
         axios.post('/contact-form.json', data)
             .then(response => {
             console.log(response)
+             this.setState({showSpinner: false})
         }).catch(error => {
             console.log(error)
         })
@@ -81,13 +85,20 @@ console.log(data)
             </div>
         );
 
+        let spinner = null;
+        if (this.state.showSpinner) {
+            spinner =   <Spinner />
+        }
+
         return(
             <div style={{height: '100vh'}} className={'about-me-wrapper'}>
+
                 <h1>O mnie !</h1>
                 <br/>
                 <hr/>
                 <br/>
                 <div className={'form-wrapper'}>
+                    {spinner}
                     <h3 className={'form-title'}>Napisz do mnie !</h3>
                     <form action="">
                         {input}

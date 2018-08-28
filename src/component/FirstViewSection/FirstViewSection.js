@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Auxs from '../../hoc/Auxs';
-import ScrollFirstViewBtn from './Button/Button';
+import ScrollFirstViewBtn from '../UI/Button/Button';
 import './FirstViewSection.css';
 
 class FirstViewSection extends Component {
