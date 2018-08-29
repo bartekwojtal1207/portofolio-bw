@@ -103,7 +103,7 @@ class AboutMeSection extends Component{
                     <form action="">
                         {input}
                         <br/>
-                        <button className={'btn btn-info form-submit'}  onClick={(event)=> {this.clickHandler(event)}} >wyślij</button>
+                        <button className={'btn btn-info form-submit'}  onClick={(event)=> {this.clickHandler(event)}}  disabled={this.state.showSpinner} >wyślij</button>
                     </form>
                 </div>
                 <div className={'logo-wrapper'}>
