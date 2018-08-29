@@ -92,7 +92,14 @@ class AboutMeSection extends Component{
 
         return(
             <div style={{height: '100vh'}} className={'about-me-wrapper'}>
-
+                <nav>
+                    <ul className={'navigation'}>
+                        <li><a href="/">o mnie</a></li>
+                        <li><a href="/projekty">projety</a></li>
+                        <li><a href="/wskazowki">wskazówki</a></li>
+                        <li><a href="/kontakt">kontakt</a></li>
+                    </ul>
+                </nav>
                 <h1>O mnie !</h1>
                 <br/>
                 <hr/>
